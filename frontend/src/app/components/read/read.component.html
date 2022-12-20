@@ -1,0 +1,120 @@
+<ion-content [fullscreen]="true">
+
+  <div class="containerParent">
+
+    <h4 class="overskrift"> All Courses ({{countCourses}}) </h4>
+    <ion-searchbar 
+    placeholder="Search for a topic" 
+    [(ngModel)]="searchTerm" 
+    showCancelButton="focus" animate class="searchbar">
+    </ion-searchbar>
+
+    <div class="containerr">
+
+      <div *ngIf="deletedSuccesMsg" class="err">
+        <p>User deleted.</p>
+      </div>
+    
+      <!-- make a details component for the details of every course -->
+    
+      <div class="kursusContainer"*ngFor="let us of readData | filter:searchTerm">
+        <a 
+        class="a"
+        [routerLink]="['/detailsCom', us.id]">
+          <div class="img"> <img src="{{us.img}}" >
+            <p class="fag"> {{us.fag}} </p>
+          </div>
+  
+          <div class="indhold">
+            <h5> {{us.overskrift}} </h5>
+            <p> {{us.beskrivelse}} </p>
+            <button class="deltebtn" 
+            (click)="deleteID(us.id)" 
+            *ngIf="auth.isAuthenticated$ | async;">Delete
+            </button>
+            <button class="updateBtn" 
+            *ngIf="auth.isAuthenticated$ | async;">
+              <a [routerLink]="['/create', us.id]">Update</a> 
+            </button>
+          </div>
+        </a>
+
+      </div>
+    
+    </div>
+
+  </div>
+
+
+  <!-- footer section -->
+  <ion-footer>
+
+    <div class="footerContainer">
+
+      <div class="logo">
+        <h3>studyRoom</h3>
+    
+        <label>Subscribe to our newsletter here </label> <br><br>
+        <input class="input" placeholder="Insert e-mail">
+        <p class="tilmeldBtn">Subscribe</p>
+    
+        <div class="icons">
+          <ion-icon
+          name="logo-facebook"
+          size="large"
+          class="md:py-4 ikon"
+        ></ion-icon>
+        <ion-icon
+          name="logo-linkedin"
+          size="large"
+          class="md:py-4 ikon"
+        ></ion-icon>
+        <ion-icon
+          name="mail-outline"
+          size="large"
+          class="md:py-4 ikon"
+        ></ion-icon>
+        <ion-icon
+          name="call-outline"
+          size="large"
+          class="md:py-4 ikon"
+        ></ion-icon>
+        </div>
+    
+      </div>
+    
+      <div class="footer">
+        <h3>Company</h3>
+        <ul>
+          <li>Careers</li>
+          <li>Partnerships</li>
+          <li>Blog</li>
+          <li>Forum</li>
+        </ul>
+      </div>
+    
+      <div class="footer">
+        <h3>Links</h3>
+        <ul>
+          <li>Home</li>
+          <li>Courses</li>
+          <li>Create</li>
+          <li>Why Pick Us</li>
+        </ul>
+      </div>
+    
+      <div class="footer">
+        <h3>Contact</h3>
+        <ul>
+          <li>+45 12 34 56 78</li>
+          <li>contact@studyroom.dk</li>
+          <li>Frederikssundsvej 155B, st. TV </li>
+        </ul>
+      </div>
+    </div>
+    
+  </ion-footer>
+  <!-- footer section -->
+
+</ion-content>
+

@@ -1,0 +1,125 @@
+<ion-content [fullscreen]="true" style="background-color: white;">
+  <div class="container">
+
+
+    <p class="txt" *ngIf="!getParamId"> Opret et kursus ved at udfylde alle kolonner for neden: </p>
+    <div *ngIf="getParamId"> 
+      <p class="txt">Du er nu i gang med at opdatere kursus nr. {{getParamId}}</p> 
+      <button class="opdaterbtn"> <a routerLink="/read">Til kursusoversigt</a> </button>
+    </div>
+  
+    <div *ngIf="errorMsg" class="err">
+      <p> {{errorMsg}}</p>
+    </div>
+  
+    <div *ngIf="succesMsg" class="succesMsg">
+      <p>{{succesMsg}}</p>
+    </div>
+  
+  <form [formGroup]="userForm" >
+  
+    <div class="input">
+      <input type="text" placeholder="Enter overskrift" formControlName="overskrift">
+    </div>
+    
+  
+    <div class="input">
+      <input type="text" placeholder="Enter beskrivelse" formControlName="beskrivelse">
+    </div>
+  
+    <div class="input">
+      <input type="text" placeholder="Enter fag" formControlName="fag">
+    </div>
+  
+    <div class="input">
+      <input type="text" placeholder="Enter img url" formControlName="img">
+    </div>
+  
+    <div class="input content">
+      <input type="text" placeholder="Enter content" formControlName="content">
+    </div>
+  
+    <button class="btn" *ngIf="!getParamId" (click)="userSubmit()">Opret kursus</button>
+    <button class="btn" *ngIf="getParamId" (click)="userUpdate()">Opdater kursus</button>
+  
+  </form>
+  
+  
+  </div>
+  
+
+
+    <!-- footer section -->
+    <ion-footer>
+
+      <div class="footerContainer">
+  
+        <div class="logo">
+          <h3>studyRoom</h3>
+      
+          <label>Subscribe to our newsletter here </label> <br><br>
+          <input class="input" placeholder="Insert e-mail">
+          <p class="tilmeldBtn">Subscribe</p>
+      
+          <div class="icons">
+            <ion-icon
+            name="logo-facebook"
+            size="large"
+            class="md:py-4 ikon"
+          ></ion-icon>
+          <ion-icon
+            name="logo-linkedin"
+            size="large"
+            class="md:py-4 ikon"
+          ></ion-icon>
+          <ion-icon
+            name="mail-outline"
+            size="large"
+            class="md:py-4 ikon"
+          ></ion-icon>
+          <ion-icon
+            name="call-outline"
+            size="large"
+            class="md:py-4 ikon"
+          ></ion-icon>
+          </div>
+      
+        </div>
+      
+        <div class="footer">
+          <h3>Company</h3>
+          <ul>
+            <li>Careers</li>
+            <li>Partnerships</li>
+            <li>Blog</li>
+            <li>Forum</li>
+          </ul>
+        </div>
+      
+        <div class="footer">
+          <h3>Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>Courses</li>
+            <li>Courses</li>
+            <li>Why Pick Us</li>
+          </ul>
+        </div>
+      
+        <div class="footer">
+          <h3>Contact</h3>
+          <ul>
+            <li>+45 12 34 56 78</li>
+            <li>contact@studyroom.dk</li>
+            <li>Frederikssundsvej 155B, st. TV </li>
+          </ul>
+        </div>
+      </div>
+      
+    </ion-footer>
+    <!-- footer section -->
+</ion-content>
+
+
+
+

@@ -1,0 +1,262 @@
+
+
+tr .row {
+    background-color: blue;
+    margin: 0px 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: left;
+}
+
+
+tr .vaerdi {
+    background-color: rgba(0, 0, 0, 0.048);
+    margin: 0px 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.deltebtn {
+    padding: 7px 10px;
+    border-radius: 3px;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    color: #2f2e41;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.deltebtn:hover {
+    padding: 7px 10px;
+    border-radius: 3px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    transition: 300ms;
+}
+
+
+
+
+
+
+.updateBtn a {
+    padding: 7px 10px;
+    border-radius: 3px;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    color: #2f2e41;
+    text-decoration: none;
+}
+
+.updateBtn a:hover {
+    color: white;
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 3px;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+    transition: 300ms;
+}
+
+.err {
+    border-radius: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.kursusContainer {
+    background-color: #f5f5f5;
+    width: 20%;
+    margin: 0px 1%;
+    border-radius: 3px;
+    color: #2f2e41;
+}
+
+.kursusContainer:hover {
+    box-shadow: 0 0 21px rgb(33 33 33 / 20%);
+}
+
+.kursusContainer div.img {
+    padding: 0px;
+    margin: 0px;
+    height: 100px;
+    position: relative;
+}
+
+.kursusContainer div.img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.kursusContainer .indhold {
+    padding: 10px;
+}
+
+.kursusContainer p.fag {
+    left: 48%;
+    margin-left: -48px;
+    bottom: -16px;
+    position: absolute;
+    background-color: #f5f5f5;
+    width: fit-content;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.kursusContainer h5, p {
+    text-align: center;
+}
+
+
+
+.containerr {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.containerParent {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+
+.search {
+    width: 200px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 14px;
+    padding: 5px 2px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+
+.overskrift {
+    margin-left: 14px;
+    color: #2f2e41;
+}
+
+.searchbar {
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+input.searchbar-input.sc-ion-searchbar-md {
+    border-radius: 20px;
+}
+
+
+.a {
+    text-decoration: none;
+    color: #2f2e41;
+}
+
+
+
+// footer styling
+
+.footerContainer {
+    justify-content: space-evenly;
+    padding: 20px 20px;
+    background-color: #E9F9EE;
+    color: #2f2e41;
+  }
+  
+  .footerContainer ul {
+    list-style: none;
+    padding: 0px;
+  }
+  
+  .footerContainer ul li {
+    margin: 10px 0px;
+    padding: 5px;
+  }
+  
+  .footerContainer ul li:hover {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 500ms;
+  }
+  
+  .ikon {
+    margin-right: 17px;
+    color: #2f2e41;
+    border-radius: 50px;
+    padding: 7px;
+  }
+  
+  .ikon:hover{
+    background-color: white;
+    cursor: pointer;
+    transition: 300ms;
+  }
+  
+  .tilmeldBtn {
+    background-color: #2f2e41;
+    border: 1px solid #2f2e41;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 13px;
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .tilmeldBtn:hover {
+    background-color: white;
+    border: 1px solid #2f2e41;
+    border-radius: 5px;
+    color: #2f2e41;
+    transition: 300ms;
+  }
+  
+  
+  .input {
+    background-color: white;
+    border-radius: 5px;
+    padding: 7px;
+    border: none;
+  }
+  
+  .footer {
+    border-bottom: 1px solid #0000001a;
+  }
+  
+  .footer:last-child {
+    border-bottom: none;
+  }
+  
+  .logo {
+    border-bottom: 1px solid #0000001a;
+    padding-bottom: 15px;
+  }
+  
+  
+  @media only screen and (min-width: 800px) {
+  
+    .footerContainer {
+      display: flex;
+      padding: 50px 20px;
+    }
+  
+    .footer{
+      border-bottom: none;
+    }
+    
+    .logo {
+      border-bottom: none;
+    }
+  
+  }
